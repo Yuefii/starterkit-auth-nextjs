@@ -1,0 +1,14 @@
+node_modules/
+.next/
+public/
+*.log
+*.config.ts
+*.config.mjs
+yarn.lock
+package.json
+.env
+.env.local
+.env.development
+.env.production
+.env.example
+

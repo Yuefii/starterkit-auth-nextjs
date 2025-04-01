@@ -1,26 +1,26 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "@/app/globals.css";
-import { ReactNode } from "react";
+import type { Metadata } from 'next'
+import { Geist, Geist_Mono } from 'next/font/google'
+import '@/app/globals.css'
+import { ReactNode } from 'react'
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+  variable: '--font-geist-sans',
+  subsets: ['latin']
+})
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+  variable: '--font-geist-mono',
+  subsets: ['latin']
+})
 
 const metadata: Metadata = {
-  title: "Starter Kit Authentication Next JS",
-  description: "Starter Kit Authentication Next JS",
-};
+  title: 'Starter Kit Authentication Next JS',
+  description: 'Starter Kit Authentication Next JS'
+}
 
 type LayoutProps = {
-  children: ReactNode;
-};
+  children: ReactNode
+}
 const Layout = ({ children }: LayoutProps) => {
   return (
     <html lang="en">
@@ -34,8 +34,8 @@ const Layout = ({ children }: LayoutProps) => {
         </main>
       </body>
     </html>
-  );
-};
+  )
+}
 
-export { metadata };
-export default Layout;
+export { metadata }
+export default Layout

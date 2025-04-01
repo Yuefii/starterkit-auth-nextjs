@@ -1,12 +1,12 @@
-import Image from "next/image";
+import Image from 'next/image'
 
-import { auth } from "@/lib/api/auth";
-import { SignOut } from "@/components/sign-out";
-import { redirect } from "next/navigation";
+import { auth } from '@/lib/api/auth'
+import { SignOut } from '@/components/sign-out'
+import { redirect } from 'next/navigation'
 
 const Page = async () => {
-  const session = await auth();
-  if (!session) redirect("/sign-in");
+  const session = await auth()
+  if (!session) redirect('/sign-in')
 
   return (
     <>
@@ -15,16 +15,17 @@ const Page = async () => {
         <div className="py-3 flex justify-center items-center">
           <Image
             className="rounded-full"
-            src={session.user?.image || "/default-avatar.png"}
+            src={session.user?.image || '/default-avatar.png'}
             alt="image"
             width={100}
-            height={100} />
+            height={100}
+          />
         </div>
         <p className="font-medium">{session.user?.name}</p>
       </div>
       <SignOut />
     </>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
